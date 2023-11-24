@@ -17,22 +17,22 @@ The code was developed during the project to automate the analysis of rheology d
 The version used for analysis in this paper was finalized in 2022 (v22). The version published here is v22 updated for legibility and user friendliness (v23).
 
 ## Repository contents 
-The software is divide in 3 python scripts in [AFMR_software_v23]():
-* [AFMR_FileHandler]()
-* [AFMR_RawDataHandler]()
-* [AFMR_FinalResultsHandler]()
+The software is divide in 3 python scripts in [AFMR_software_v23](AFMR_software_v23):
+* [AFMR_FileHandler](AFMR_software_v23/AFMR_FileHandler.py)
+* [AFMR_RawDataHandler](AFMR_software_v23/AFMR_RawDataHandler.py)
+* [AFMR_FinalResultsHandler](AFMR_software_v23/AFMR_FinalResultsHandler.py)
 Documention on specific script functionality for classes and functions is annotated in the scripts
 
 Data for testing the script is also included:
-* [Raw AFMR data test]()
+* Raw AFMR data test
 
-An example of complete analysis output can be found in:
-* [Raw AFMR data]()
-* [Results per beadnumber]()
-* [No match frequency]()
-* [Figures raw data]()
-* [Final results]()
-* [Final figures]()
+An example of complete analysis output can be found in [Example analysis results](./Example analysis results) which contains:
+* Raw AFMR data tdms files
+* Results per beadnumber
+* No match frequency
+* Figures raw data
+* Final results
+* Final figures
 
 ## User manual
 To run the code the python scripts need to be stored in the same folder on your local machine. 
@@ -53,7 +53,7 @@ When the ZIP file is saved to your computer extract the contents to your desired
 
 ### Installing dependencies
 Before running the code use a terminal to install the code dependencies.
-Navigate to your local [AFMR_software_v23]() directory using the terminal.
+Navigate to your local [AFMR_software_v23](AFMR_software_v23) directory using the terminal.
 Run the following command to install the dependencies
 
 ```python
@@ -63,20 +63,20 @@ pip install -r AFMR_dependencies.txt
 ### Running the code
 In the repository files for testing the code are included (see [Repository contents](#repository-contents)).
 The analysis workflow works as follows:
-#### 1. Run [AFMR_RawDataHandler]()
+#### 1. Run [AFMR_RawDataHandler](AFMR_software_v23/AFMR_RawDataHandler.py)
 This opens a folder navigation GUI so you can select the folder containing raw data files. 
-The input files have to be tdms file types. For testing select the folder [Raw AFMR data test]().
-The output will be 3 folders within the selected folder: [Results per beadnumber](), [No match frequency]() and [Figures raw data]().
-Values obtained from the analysis will be written to csv files and stored in [Results per beadnumber](). 
-Data files of which the fitted frequency does not match the input frequency will be moved to [No match frequency]() and won't be included in further analysis.
-Figures obtained from various plots of the raw data will be saved in [Figures raw data]()
+The input files have to be tdms file types. For testing select the folder [Raw AFMR data test](Raw AFMR data test).
+The output will be 3 folders within the selected folder: Results per beadnumber, No match frequency and Figures raw data.
+Values obtained from the analysis will be written to csv files and stored in Results per beadnumber. 
+Data files of which the fitted frequency does not match the input frequency will be moved to No match frequency and won't be included in further analysis.
+Figures obtained from various plots of the raw data will be saved in Figures raw data.
 Now the final results can be obtained.
 
-#### 2. Run [AFMR_FinalResultsHandler]()
-This open up the folder navigation GUI again. Now you select the [Results per beadnumber]() which can now be found in the [Raw AFMR data test]() folder on your computer.
-The output will be 3 folders within the selected folder: [Final results]() and [Final figures]().
-Values obtained from the analysis will be written to csv files and stored in [Final results]().
-This files will also immediately be used to plot the final results figures which are saved in [Final figures]().
+#### 2. Run [AFMR_FinalResultsHandler](AFMR_software_v23/AFMR_FinalResultsHandler.py)
+This open up the folder navigation GUI again. Now you select the Results per beadnumber which can now be found in the Raw AFMR data test folder on your computer.
+The output will be 3 folders within the selected folder: Final results and Final figures.
+Values obtained from the analysis will be written to csv files and stored in Final results.
+This files will also immediately be used to plot the final results figures which are saved in Final figures.
 
 ## Final remarks
 * Feedback is appreciated via Github or e-mail
