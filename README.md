@@ -26,11 +26,10 @@ Documention on specific script functionality for classes and functions is annota
 Data for testing the script is also included:
 * Raw AFMR data test
 
-An example of complete analysis output can be found in [Example analysis results](./Example analysis results) which contains:
+An example of complete analysis output can be found in Example analysis results which contains:
 * Raw AFMR data tdms files
 * Results per beadnumber
-* No match frequency
-* Figures raw data
+* Figures raw data checks
 * Final results
 * Final figures
 
@@ -74,7 +73,7 @@ Now the final results can be obtained.
 
 #### 2. Run [AFMR_FinalResultsHandler](AFMR_software_v23/AFMR_FinalResultsHandler.py)
 This open up the folder navigation GUI again. Now you select the Results per beadnumber which can now be found in the Raw AFMR data test folder on your computer.
-The output will be 3 folders within the selected folder: Final results and Final figures.
+The output will be 2 folders within the selected folder: Final results and Final figures.
 Values obtained from the analysis will be written to csv files and stored in Final results.
 This files will also immediately be used to plot the final results figures which are saved in Final figures.
 
